@@ -2,11 +2,11 @@ BUILD_DIR	:= ./bin
 SRC_DIR		:= ./src
 
 OUTPUT_NAME	:= "firstApp"
-COMP_FILES	:= ${SRC_DIR}/main.cpp ${SRC_DIR}/Game.cpp
+COMP_FILES	:= ${SRC_DIR}/*.cpp 
 
-INCLUDE		:= "C:\SDL2-2.0.16\i686-w64-mingw32\include\SDL2"
-LIB			:= "C:\SDL2-2.0.16\i686-w64-mingw32\lib"
-DLL			:= "-lmingw32" "-lSDL2main" "-lSDL2"
+INCLUDE		:= "C:/msys64/mingw64/include/SDL2"
+LIB			:= "C:/msys64/mingw64/bin"
+DLL			:= "-lmingw32" "-lSDL2main" "-lSDL2" "-lSDL2_image" "-lSDL2_ttf"
 
 MSG_START	:= "Build Started"
 MSG_END		:= "Build Complete"
@@ -23,5 +23,5 @@ build:
 	#create bin directory
 	mkdir ${BUILD_DIR}
 
-	g++ -o ${BUILD_DIR}/${OUTPUT_NAME} ${COMP_FILES} -I${INCLUDE} -L${LIB} $(DLL)
+	g++ -o ${BUILD_DIR}/${OUTPUT_NAME} ${COMP_FILES} -I${INCLUDE} -I./include -I. -L${LIB} $(DLL)
 	@echo ${MSG_END}

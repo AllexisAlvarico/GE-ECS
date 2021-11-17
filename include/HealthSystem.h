@@ -16,12 +16,10 @@ public:
             for(Component* t_c : t_e.m_getComponent()){
 
                 HealthComponent* m_healthComp{dynamic_cast<HealthComponent*>(t_c)};
-
                 if(m_healthComp)
                 {
                     std::cout << "Component: " << m_healthComp->m_id << "Health: " << m_healthComp->getHealth() << std::endl;
                 }
-
             }
         }
         //std::cout << "HealthSystem Update" << std::endl;

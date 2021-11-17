@@ -10,5 +10,5 @@ private:
 public:
     InputComponent(std::string t_name) : Component(t_name){};
 
-    const Uint8 inputKey(SDL_Scancode t_code) {}
+    const Uint8 inputKey(SDL_Scancode t_code) {return m_keys[t_code];}
 };

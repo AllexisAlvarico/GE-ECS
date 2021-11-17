@@ -3,7 +3,6 @@
 #include "Entity.h"
 #include "HealthComponent.h"
 #include "PositionComponent.h"
-
 class AISystem
 {
 private:

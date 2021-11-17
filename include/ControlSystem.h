@@ -27,23 +27,27 @@ public:
                 {
                     if(m_inputComp->inputKey(SDL_SCANCODE_RIGHT))
                     {
-                        m_objectPosition->getPositionX() += 10.0f;
+                        m_objectPosition->getPositionX() += 1.6f;
+                        std::cout << "Player position X: " << m_objectPosition->getPositionX()  << std::endl;
                     }
                     if(m_inputComp->inputKey(SDL_SCANCODE_LEFT))
                     {
-                        m_objectPosition->getPositionX() -= 10.0f;
+                        m_objectPosition->getPositionX() -= 1.6f;
+                        std::cout << "Player position X: " << m_objectPosition->getPositionX()  << std::endl;
                     }
                     if(m_inputComp->inputKey(SDL_SCANCODE_UP))
                     {
-                        m_objectPosition->getPositionY() -= 10.0f;
+                        m_objectPosition->getPositionY() -= 1.6f;
+                        std::cout << "Player position Y: " << m_objectPosition->getPositionY() << std::endl;
                     }
                     if(m_inputComp->inputKey(SDL_SCANCODE_DOWN))
                     {
-                        m_objectPosition->getPositionY() += 10.0f;
+                        m_objectPosition->getPositionY() += 1.6f;
+                        std::cout << "Player position Y: " << m_objectPosition->getPositionY()  << std::endl;
                     }
+                   
                 }
-
-
+               
             }
         }
         //std::cout << "ControlSystem Update" << std::endl;

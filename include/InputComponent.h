@@ -6,7 +6,9 @@
 class InputComponent : public Component
 {
 private:
-    /* data */
+    const Uint8* m_keys{SDL_GetKeyboardState(nullptr)};
 public:
-    InputComponent(/* args */);
+    InputComponent(std::string t_name) : Component(t_name){};
+
+    const Uint8 inputKey(SDL_Scancode t_code) {}
 };
